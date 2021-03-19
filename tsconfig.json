@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "./build",
+    "rootDir": "./src",
+    "downlevelIteration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@u/*": [ "utils/*" ]
+    },
+    "noEmitOnError": true,
+    "inlineSourceMap": true
+  },
+  "exclude": [
+    "zbnr"
+  ]
+}

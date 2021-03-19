@@ -1,0 +1,6 @@
+node_modules/
+build/
+zbnr/build/
+
+development.env
+production.env

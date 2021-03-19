@@ -1,0 +1,13 @@
+export type Url = string;
+export type BindUri = string;
+export type AuthEndpoint = string;
+export type TokenEndpoint = string;
+export type ClientId = string;
+export type ClientSecret = string;
+export type AfterTokenRequestFunction = ( response: any, req: any, res: any ) => any;
+export type ResponseType = string;
+export type GrantType = string;
+export type Params = Record<string, any>;
+export type BeforeCodeRequestFunction = ( params: Params, req: any, res: any ) => false | Params | Promise<false | Params>;
+export type BeforeTokenRequestFunction = ( req: any, res: any ) => void | false | Promise<void | false>;
+export type TokenRequestFetchMethod = "POST" | "GET";
