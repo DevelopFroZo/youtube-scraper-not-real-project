@@ -32,7 +32,7 @@ async function onStartScrapClick(){
     }
   }
 
-  let csv = "Playlist,Name,Published at,Like count,Dislike count,Favorite count,Comment count,Duration in seconds\n";
+  let csv = "Playlist,Name,Published at,View count,Like count,Dislike count,Favorite count,Comment count,Duration in seconds\n";
   console.log( videos.length );
 
   for( const video of videos ){
@@ -43,6 +43,7 @@ async function onStartScrapClick(){
         publishedAt
       },
       statistics: {
+        viewCount,
         likeCount,
         dislikeCount,
         favoriteCount,
@@ -66,7 +67,7 @@ async function onStartScrapClick(){
     if( minutes ) durationS += Number( minutes[1] ) * 60;
     if( seconds ) durationS += Number( seconds[1] );
 
-    csv += `${playlist_title},${title},${publishedAt},${likeCount},${dislikeCount},${favoriteCount},${commentCount},${durationS}\n`;
+    csv += `${playlist_title},${title},${publishedAt},${viewCount},${likeCount},${dislikeCount},${favoriteCount},${commentCount},${durationS}\n`;
   }
 
   const file = new Blob( [ csv ], {
